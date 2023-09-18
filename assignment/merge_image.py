@@ -470,6 +470,7 @@ def edge_detection(res_images, canny_images):
 if __name__ == "__main__":
 
     cols, rows = sys.argv[1], sys.argv[2]
+    print(cols, rows)
 
     cropped_images = [cv2.imread(f) for f in glob.glob("image/crooped_images/*.jpg")]
 
@@ -487,3 +488,4 @@ if __name__ == "__main__":
 
     # 각 이미지의 변환 형태에 따른 Edge를 검출하여 경계선 부분의 edge 합을 구하는 코드
     df = edge_detection(res_images, canny_images)
+    
