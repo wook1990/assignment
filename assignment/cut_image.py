@@ -59,11 +59,11 @@ def cut_imgae(image_path, cols, rows) -> None:
 if __name__ == "__main__":
 
 
-    cols, rows = sys.argv[1], sys.argv[2]
-
-    if sys.argv[3] == None:
-        image_path = "image/origin.jpeg"
-    else:
+    cols, rows = int(sys.argv[1]), int(sys.argv[2])
+    try:
         image_path = sys.argv[3]
-    print(cols, rows, image_path)
+    except:
+        image_path = "image/origin.jpeg"
+     
+       
     cut_imgae(image_path, cols, rows)

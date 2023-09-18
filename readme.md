@@ -11,7 +11,7 @@ test
     ├─assignment  
     │  ├─  cut_image.py  
     │  ├─  merge_image.py  
-    │  ├─  readme.md   
+    │  ├─  testautimation.sh
     │  └──image
     │      ├─  origin.jpeg   
     │      └─  crooped_images  
@@ -21,16 +21,19 @@ test
     │            └─ cropped_9293891.jpg  
     │                
     └─ dev_test  
-        ├─  merge_img_test.ipynb  
-        ├─  meta_ai_test_1.ipynb  
-        └─  stitching_test.ipynb  
+    │    ├─  merge_img_test.ipynb  
+    │    ├─  meta_ai_test_1.ipynb  
+    │    └─  stitching_test.ipynb  
+    └─  readme.md   
  ```     
 
 - 제출할 과제 파일은 **assingment** 폴더 아래 위치
 - 과제진행을 위한 원본 이미지 샘플은 image 경로 아래 origin.jpeg로 위치하며, 다른 이미지를 사용할 경우 외부인자로 파일 경로를 받아 사용할 수 있음
 - cropped_image 경로는 분할한 이미지를 저장하는 폴더
 - dev_test는 과제를 진행하면서 적용할 수 있는 방법들에 대한 테스트를 진행한 파일을 보관
-
+- testautomation.sh 스크립트 구성 쉘 스크립트 외부 파라미터 입력
+    - sh testautomation.sh {columns} {rows} {origin_image_path(optional)}
+    - 이미지 경로는 옵셔널하게 입력할 수 있고, 입력하지 않는다면, 테스트 이미지로 사용됨
 
 ### 개발 과정
 ##### 1. cut_imgae.py

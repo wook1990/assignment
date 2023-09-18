@@ -11,11 +11,11 @@ def set_resolution(cropped_images):
     for idx, img in enumerate(cropped_images):
         if idx == 0:
             stan_img_shape = img.shape[:2]
-            print(stan_img_shape)
+            # print(stan_img_shape)
             res_set.append(img)
         else:
             if stan_img_shape == img.shape[:2]:
-                print("ok")
+                # print("ok")
                 res_set.append(img)
             else:
                 sub_img = cv2.rotate(img, cv2.ROTATE_90_COUNTERCLOCKWISE)
@@ -53,8 +53,8 @@ def edge_detection(res_images, canny_images):
             diff_img = v_canny_img - v_c_img
             h, w = v_img.shape[:2]
             edge_sum = numpy.sum(diff_img[:, int(w / 2 - 30):int(w / 2 + 30)])
-            print(
-                f"Order Number {i + 1}, orderType: {'none'}Matching Order {num}, Merge Type {'Horizontal'}, Transformation {'none'} , EdgeSum {edge_sum}")
+            # print(
+            #     f"Order Number {i + 1}, orderType: {'none'}Matching Order {num}, Merge Type {'Horizontal'}, Transformation {'none'} , EdgeSum {edge_sum}")
             result_dict.append(
                 {"orderNumber": i + 1, "orderType": "none", "matchingNumber": num, "matchingType": 'Horizontal',
                  "transformation": 'none', "edgeSum": edge_sum})
@@ -66,8 +66,8 @@ def edge_detection(res_images, canny_images):
             diff_img = v_canny_img - v_c_img
             h, w = v_img.shape[:2]
             edge_sum = numpy.sum(diff_img[:, int(w / 2 - 30):int(w / 2 + 30)])
-            print(
-                f"Order Number {i + 1}, orderType: {'none'}Matching Order {num}, Merge Type {'Horizontal'}, Transformation {'none'} , EdgeSum {edge_sum}")
+            # print(
+            #     f"Order Number {i + 1}, orderType: {'none'}Matching Order {num}, Merge Type {'Horizontal'}, Transformation {'none'} , EdgeSum {edge_sum}")
             result_dict.append(
                 {"orderNumber": i + 1, "orderType": "none", "matchingNumber": num, "matchingType": 'Horizontal',
                  "transformation": 'mirroring', "edgeSum": edge_sum})
@@ -79,8 +79,8 @@ def edge_detection(res_images, canny_images):
             diff_img = v_canny_img - v_c_img
             h, w = v_img.shape[:2]
             edge_sum = numpy.sum(diff_img[:, int(w / 2 - 30):int(w / 2 + 30)])
-            print(
-                f"Order Number {i + 1}, orderType: {'none'}Matching Order {num}, Merge Type {'Horizontal'}, Transformation {'none'} , EdgeSum {edge_sum}")
+            # print(
+            #     f"Order Number {i + 1}, orderType: {'none'}Matching Order {num}, Merge Type {'Horizontal'}, Transformation {'none'} , EdgeSum {edge_sum}")
             result_dict.append(
                 {"orderNumber": i + 1, "orderType": "none", "matchingNumber": num, "matchingType": 'Horizontal',
                  "transformation": 'flipping', "edgeSum": edge_sum})
@@ -92,8 +92,8 @@ def edge_detection(res_images, canny_images):
             diff_img = v_canny_img - v_c_img
             h, w = v_img.shape[:2]
             edge_sum = numpy.sum(diff_img[:, int(w / 2 - 30):int(w / 2 + 30)])
-            print(
-                f"Order Number {i + 1}, orderType: {'none'}Matching Order {num}, Merge Type {'Horizontal'}, Transformation {'none'} , EdgeSum {edge_sum}")
+            # print(
+            #     f"Order Number {i + 1}, orderType: {'none'}Matching Order {num}, Merge Type {'Horizontal'}, Transformation {'none'} , EdgeSum {edge_sum}")
             result_dict.append(
                 {"orderNumber": i + 1, "orderType": "none", "matchingNumber": num, "matchingType": 'Horizontal',
                  "transformation": 'mirroring&flipping', "edgeSum": edge_sum})
@@ -106,8 +106,8 @@ def edge_detection(res_images, canny_images):
             diff_img = v_canny_img - v_c_img
             h, w = v_img.shape[:2]
             edge_sum = numpy.sum(diff_img[:, int(w / 2 - 30):int(w / 2 + 30)])
-            print(
-                f"Order Number {i + 1}, orderType: {'mirroring'}Matching Order {num}, Merge Type {'Horizontal'}, Transformation {'none'} , EdgeSum {edge_sum}")
+            # print(
+            #     f"Order Number {i + 1}, orderType: {'mirroring'}Matching Order {num}, Merge Type {'Horizontal'}, Transformation {'none'} , EdgeSum {edge_sum}")
             result_dict.append(
                 {"orderNumber": i + 1, "orderType": "mirroring", "matchingNumber": num, "matchingType": 'Horizontal',
                  "transformation": 'none', "edgeSum": edge_sum})
@@ -119,8 +119,8 @@ def edge_detection(res_images, canny_images):
             diff_img = v_canny_img - v_c_img
             h, w = v_img.shape[:2]
             edge_sum = numpy.sum(diff_img[:, int(w / 2 - 30):int(w / 2 + 30)])
-            print(
-                f"Order Number {i + 1}, orderType: {'mirroring'}Matching Order {num}, Merge Type {'Horizontal'}, Transformation {'none'} , EdgeSum {edge_sum}")
+            # print(
+            #     f"Order Number {i + 1}, orderType: {'mirroring'}Matching Order {num}, Merge Type {'Horizontal'}, Transformation {'none'} , EdgeSum {edge_sum}")
             result_dict.append(
                 {"orderNumber": i + 1, "orderType": "mirroring", "matchingNumber": num, "matchingType": 'Horizontal',
                  "transformation": 'mirroring', "edgeSum": edge_sum})
@@ -132,8 +132,8 @@ def edge_detection(res_images, canny_images):
             diff_img = v_canny_img - v_c_img
             h, w = v_img.shape[:2]
             edge_sum = numpy.sum(diff_img[:, int(w / 2 - 30):int(w / 2 + 30)])
-            print(
-                f"Order Number {i + 1}, orderType: {'mirroring'}Matching Order {num}, Merge Type {'Horizontal'}, Transformation {'none'} , EdgeSum {edge_sum}")
+            # print(
+            #     f"Order Number {i + 1}, orderType: {'mirroring'}Matching Order {num}, Merge Type {'Horizontal'}, Transformation {'none'} , EdgeSum {edge_sum}")
             result_dict.append(
                 {"orderNumber": i + 1, "orderType": "mirroring", "matchingNumber": num, "matchingType": 'Horizontal',
                  "transformation": 'flipping', "edgeSum": edge_sum})
@@ -145,8 +145,8 @@ def edge_detection(res_images, canny_images):
             diff_img = v_canny_img - v_c_img
             h, w = v_img.shape[:2]
             edge_sum = numpy.sum(diff_img[:, int(w / 2 - 30):int(w / 2 + 30)])
-            print(
-                f"Order Number {i + 1}, orderType: {'mirroring'}Matching Order {num}, Merge Type {'Horizontal'}, Transformation {'none'} , EdgeSum {edge_sum}")
+            # print(
+            #     f"Order Number {i + 1}, orderType: {'mirroring'}Matching Order {num}, Merge Type {'Horizontal'}, Transformation {'none'} , EdgeSum {edge_sum}")
             result_dict.append(
                 {"orderNumber": i + 1, "orderType": "mirroring", "matchingNumber": num, "matchingType": 'Horizontal',
                  "transformation": 'mirroring&flipping', "edgeSum": edge_sum})
@@ -159,8 +159,8 @@ def edge_detection(res_images, canny_images):
             diff_img = v_canny_img - v_c_img
             h, w = v_img.shape[:2]
             edge_sum = numpy.sum(diff_img[:, int(w / 2 - 30):int(w / 2 + 30)])
-            print(
-                f"Order Number {i + 1}, orderType: {'flipping'}Matching Order {num}, Merge Type {'Horizontal'}, Transformation {'none'} , EdgeSum {edge_sum}")
+            # print(
+            #     f"Order Number {i + 1}, orderType: {'flipping'}Matching Order {num}, Merge Type {'Horizontal'}, Transformation {'none'} , EdgeSum {edge_sum}")
             result_dict.append(
                 {"orderNumber": i + 1, "orderType": "flipping", "matchingNumber": num, "matchingType": 'Horizontal',
                  "transformation": 'none', "edgeSum": edge_sum})
@@ -172,8 +172,8 @@ def edge_detection(res_images, canny_images):
             diff_img = v_canny_img - v_c_img
             h, w = v_img.shape[:2]
             edge_sum = numpy.sum(diff_img[:, int(w / 2 - 30):int(w / 2 + 30)])
-            print(
-                f"Order Number {i + 1}, orderType: {'flipping'}Matching Order {num}, Merge Type {'Horizontal'}, Transformation {'none'} , EdgeSum {edge_sum}")
+            # print(
+            #     f"Order Number {i + 1}, orderType: {'flipping'}Matching Order {num}, Merge Type {'Horizontal'}, Transformation {'none'} , EdgeSum {edge_sum}")
             result_dict.append(
                 {"orderNumber": i + 1, "orderType": "flipping", "matchingNumber": num, "matchingType": 'Horizontal',
                  "transformation": 'mirroring', "edgeSum": edge_sum})
@@ -185,8 +185,8 @@ def edge_detection(res_images, canny_images):
             diff_img = v_canny_img - v_c_img
             h, w = v_img.shape[:2]
             edge_sum = numpy.sum(diff_img[:, int(w / 2 - 30):int(w / 2 + 30)])
-            print(
-                f"Order Number {i + 1}, orderType: {'flipping'}Matching Order {num}, Merge Type {'Horizontal'}, Transformation {'none'} , EdgeSum {edge_sum}")
+            # print(
+            #     f"Order Number {i + 1}, orderType: {'flipping'}Matching Order {num}, Merge Type {'Horizontal'}, Transformation {'none'} , EdgeSum {edge_sum}")
             result_dict.append(
                 {"orderNumber": i + 1, "orderType": "flipping", "matchingNumber": num, "matchingType": 'Horizontal',
                  "transformation": 'flipping', "edgeSum": edge_sum})
@@ -198,8 +198,8 @@ def edge_detection(res_images, canny_images):
             diff_img = v_canny_img - v_c_img
             h, w = v_img.shape[:2]
             edge_sum = numpy.sum(diff_img[:, int(w / 2 - 30):int(w / 2 + 30)])
-            print(
-                f"Order Number {i + 1}, orderType: {'flipping'}Matching Order {num}, Merge Type {'Horizontal'}, Transformation {'none'} , EdgeSum {edge_sum}")
+            # print(
+            #     f"Order Number {i + 1}, orderType: {'flipping'}Matching Order {num}, Merge Type {'Horizontal'}, Transformation {'none'} , EdgeSum {edge_sum}")
             result_dict.append(
                 {"orderNumber": i + 1, "orderType": "flipping", "matchingNumber": num, "matchingType": 'Horizontal',
                  "transformation": 'mirroring&flipping', "edgeSum": edge_sum})
@@ -212,8 +212,8 @@ def edge_detection(res_images, canny_images):
             diff_img = v_canny_img - v_c_img
             h, w = v_img.shape[:2]
             edge_sum = numpy.sum(diff_img[:, int(w / 2 - 30):int(w / 2 + 30)])
-            print(
-                f"Order Number {i + 1}, orderType: {'mirroring&flipping'}Matching Order {num}, Merge Type {'Horizontal'}, Transformation {'none'} , EdgeSum {edge_sum}")
+            # print(
+            #     f"Order Number {i + 1}, orderType: {'mirroring&flipping'}Matching Order {num}, Merge Type {'Horizontal'}, Transformation {'none'} , EdgeSum {edge_sum}")
             result_dict.append({"orderNumber": i + 1, "orderType": "mirroring&flipping", "matchingNumber": num,
                                 "matchingType": 'Horizontal', "transformation": 'none', "edgeSum": edge_sum})
 
@@ -224,8 +224,8 @@ def edge_detection(res_images, canny_images):
             diff_img = v_canny_img - v_c_img
             h, w = v_img.shape[:2]
             edge_sum = numpy.sum(diff_img[:, int(w / 2 - 30):int(w / 2 + 30)])
-            print(
-                f"Order Number {i + 1}, orderType: {'mirroring&flipping'}Matching Order {num}, Merge Type {'Horizontal'}, Transformation {'none'} , EdgeSum {edge_sum}")
+            # print(
+            #     f"Order Number {i + 1}, orderType: {'mirroring&flipping'}Matching Order {num}, Merge Type {'Horizontal'}, Transformation {'none'} , EdgeSum {edge_sum}")
             result_dict.append({"orderNumber": i + 1, "orderType": "mirroring&flipping", "matchingNumber": num,
                                 "matchingType": 'Horizontal', "transformation": 'mirroring', "edgeSum": edge_sum})
 
@@ -236,8 +236,8 @@ def edge_detection(res_images, canny_images):
             diff_img = v_canny_img - v_c_img
             h, w = v_img.shape[:2]
             edge_sum = numpy.sum(diff_img[:, int(w / 2 - 30):int(w / 2 + 30)])
-            print(
-                f"Order Number {i + 1}, orderType: {'mirroring&flipping'}Matching Order {num}, Merge Type {'Horizontal'}, Transformation {'none'} , EdgeSum {edge_sum}")
+            # print(
+            #     f"Order Number {i + 1}, orderType: {'mirroring&flipping'}Matching Order {num}, Merge Type {'Horizontal'}, Transformation {'none'} , EdgeSum {edge_sum}")
             result_dict.append({"orderNumber": i + 1, "orderType": "mirroring&flipping", "matchingNumber": num,
                                 "matchingType": 'Horizontal', "transformation": 'flipping', "edgeSum": edge_sum})
 
@@ -248,8 +248,8 @@ def edge_detection(res_images, canny_images):
             diff_img = v_canny_img - v_c_img
             h, w = v_img.shape[:2]
             edge_sum = numpy.sum(diff_img[:, int(w / 2 - 30):int(w / 2 + 30)])
-            print(
-                f"Order Number {i + 1}, orderType: {'mirroring&flipping'}Matching Order {num}, Merge Type {'Horizontal'}, Transformation {'none'} , EdgeSum {edge_sum}")
+            # print(
+            #     f"Order Number {i + 1}, orderType: {'mirroring&flipping'}Matching Order {num}, Merge Type {'Horizontal'}, Transformation {'none'} , EdgeSum {edge_sum}")
             result_dict.append({"orderNumber": i + 1, "orderType": "mirroring&flipping", "matchingNumber": num,
                                 "matchingType": 'Horizontal', "transformation": 'mirroring&flipping',
                                 "edgeSum": edge_sum})
@@ -264,8 +264,8 @@ def edge_detection(res_images, canny_images):
             diff_img = v_canny_img - v_c_img
             h, w = v_img.shape[:2]
             edge_sum = numpy.sum(diff_img[int(h / 2 - 30):int(h / 2 + 30), :])
-            print(
-                f"Order Number {i + 1}, orderType: {'none'}, Matching Order {num}, Merge Type {'vertical'}, Transformation {'none'} , EdgeSum {edge_sum}")
+            # print(
+            #     f"Order Number {i + 1}, orderType: {'none'}, Matching Order {num}, Merge Type {'vertical'}, Transformation {'none'} , EdgeSum {edge_sum}")
             result_dict.append(
                 {"orderNumber": i + 1, "orderType": "none", "matchingNumber": num, "matchingType": 'vertical',
                  "transformation": 'none', "edgeSum": edge_sum})
@@ -277,8 +277,8 @@ def edge_detection(res_images, canny_images):
             diff_img = v_canny_img - v_c_img
             h, w = v_img.shape[:2]
             edge_sum = numpy.sum(diff_img[int(h / 2 - 30):int(h / 2 + 30), :])
-            print(
-                f"Order Number {i + 1}, orderType: {'none'}Matching Order {num}, Merge Type {'vertical'}, Transformation {'none'} , EdgeSum {edge_sum}")
+            # print(
+            #     f"Order Number {i + 1}, orderType: {'none'}Matching Order {num}, Merge Type {'vertical'}, Transformation {'none'} , EdgeSum {edge_sum}")
             result_dict.append(
                 {"orderNumber": i + 1, "orderType": "none", "matchingNumber": num, "matchingType": 'vertical',
                  "transformation": 'mirroring', "edgeSum": edge_sum})
@@ -290,8 +290,8 @@ def edge_detection(res_images, canny_images):
             diff_img = v_canny_img - v_c_img
             h, w = v_img.shape[:2]
             edge_sum = numpy.sum(diff_img[int(h / 2 - 30):int(h / 2 + 30), :])
-            print(
-                f"Order Number {i + 1}, orderType: {'none'}Matching Order {num}, Merge Type {'vertical'}, Transformation {'none'} , EdgeSum {edge_sum}")
+            # print(
+            #     f"Order Number {i + 1}, orderType: {'none'}Matching Order {num}, Merge Type {'vertical'}, Transformation {'none'} , EdgeSum {edge_sum}")
             result_dict.append(
                 {"orderNumber": i + 1, "orderType": "none", "matchingNumber": num, "matchingType": 'vertical',
                  "transformation": 'flipping', "edgeSum": edge_sum})
@@ -303,8 +303,8 @@ def edge_detection(res_images, canny_images):
             diff_img = v_canny_img - v_c_img
             h, w = v_img.shape[:2]
             edge_sum = numpy.sum(diff_img[int(h / 2 - 30):int(h / 2 + 30), :])
-            print(
-                f"Order Number {i + 1}, orderType: {'none'}Matching Order {num}, Merge Type {'vertical'}, Transformation {'none'} , EdgeSum {edge_sum}")
+            # print(
+            #     f"Order Number {i + 1}, orderType: {'none'}Matching Order {num}, Merge Type {'vertical'}, Transformation {'none'} , EdgeSum {edge_sum}")
             result_dict.append(
                 {"orderNumber": i + 1, "orderType": "none", "matchingNumber": num, "matchingType": 'vertical',
                  "transformation": 'mirroring&flipping', "edgeSum": edge_sum})
@@ -317,8 +317,8 @@ def edge_detection(res_images, canny_images):
             diff_img = v_canny_img - v_c_img
             h, w = v_img.shape[:2]
             edge_sum = numpy.sum(diff_img[int(h / 2 - 30):int(h / 2 + 30), :])
-            print(
-                f"Order Number {i + 1}, orderType: {'mirroring'}Matching Order {num}, Merge Type {'vertical'}, Transformation {'none'} , EdgeSum {edge_sum}")
+            # print(
+            #     f"Order Number {i + 1}, orderType: {'mirroring'}Matching Order {num}, Merge Type {'vertical'}, Transformation {'none'} , EdgeSum {edge_sum}")
             result_dict.append(
                 {"orderNumber": i + 1, "orderType": "mirroring", "matchingNumber": num, "matchingType": 'vertical',
                  "transformation": 'none', "edgeSum": edge_sum})
@@ -330,8 +330,8 @@ def edge_detection(res_images, canny_images):
             diff_img = v_canny_img - v_c_img
             h, w = v_img.shape[:2]
             edge_sum = numpy.sum(diff_img[int(h / 2 - 30):int(h / 2 + 30), :])
-            print(
-                f"Order Number {i + 1}, orderType: {'mirroring'}Matching Order {num}, Merge Type {'vertical'}, Transformation {'none'} , EdgeSum {edge_sum}")
+            # print(
+            #     f"Order Number {i + 1}, orderType: {'mirroring'}Matching Order {num}, Merge Type {'vertical'}, Transformation {'none'} , EdgeSum {edge_sum}")
             result_dict.append(
                 {"orderNumber": i + 1, "orderType": "mirroring", "matchingNumber": num, "matchingType": 'vertical',
                  "transformation": 'mirroring', "edgeSum": edge_sum})
@@ -343,8 +343,8 @@ def edge_detection(res_images, canny_images):
             diff_img = v_canny_img - v_c_img
             h, w = v_img.shape[:2]
             edge_sum = numpy.sum(diff_img[int(h / 2 - 30):int(h / 2 + 30), :])
-            print(
-                f"Order Number {i + 1}, orderType: {'mirroring'}Matching Order {num}, Merge Type {'vertical'}, Transformation {'none'} , EdgeSum {edge_sum}")
+            # print(
+            #     f"Order Number {i + 1}, orderType: {'mirroring'}Matching Order {num}, Merge Type {'vertical'}, Transformation {'none'} , EdgeSum {edge_sum}")
             result_dict.append(
                 {"orderNumber": i + 1, "orderType": "mirroring", "matchingNumber": num, "matchingType": 'vertical',
                  "transformation": 'flipping', "edgeSum": edge_sum})
@@ -356,8 +356,8 @@ def edge_detection(res_images, canny_images):
             diff_img = v_canny_img - v_c_img
             h, w = v_img.shape[:2]
             edge_sum = numpy.sum(diff_img[int(h / 2 - 30):int(h / 2 + 30), :])
-            print(
-                f"Order Number {i + 1}, orderType: {'mirroring'}Matching Order {num}, Merge Type {'vertical'}, Transformation {'none'} , EdgeSum {edge_sum}")
+            # print(
+            #     f"Order Number {i + 1}, orderType: {'mirroring'}Matching Order {num}, Merge Type {'vertical'}, Transformation {'none'} , EdgeSum {edge_sum}")
             result_dict.append(
                 {"orderNumber": i + 1, "orderType": "mirroring", "matchingNumber": num, "matchingType": 'vertical',
                  "transformation": 'mirroring&flipping', "edgeSum": edge_sum})
@@ -370,8 +370,8 @@ def edge_detection(res_images, canny_images):
             diff_img = v_canny_img - v_c_img
             h, w = v_img.shape[:2]
             edge_sum = numpy.sum(diff_img[int(h / 2 - 30):int(h / 2 + 30), :])
-            print(
-                f"Order Number {i + 1}, orderType: {'flipping'}Matching Order {num}, Merge Type {'vertical'}, Transformation {'none'} , EdgeSum {edge_sum}")
+            # print(
+            #     f"Order Number {i + 1}, orderType: {'flipping'}Matching Order {num}, Merge Type {'vertical'}, Transformation {'none'} , EdgeSum {edge_sum}")
             result_dict.append(
                 {"orderNumber": i + 1, "orderType": "flipping", "matchingNumber": num, "matchingType": 'vertical',
                  "transformation": 'none', "edgeSum": edge_sum})
@@ -383,8 +383,8 @@ def edge_detection(res_images, canny_images):
             diff_img = v_canny_img - v_c_img
             h, w = v_img.shape[:2]
             edge_sum = numpy.sum(diff_img[:, int(w / 2 - 30):int(w / 2 + 30)])
-            print(
-                f"Order Number {i + 1}, orderType: {'flipping'}Matching Order {num}, Merge Type {'vertical'}, Transformation {'none'} , EdgeSum {edge_sum}")
+            # print(
+            #     f"Order Number {i + 1}, orderType: {'flipping'}Matching Order {num}, Merge Type {'vertical'}, Transformation {'none'} , EdgeSum {edge_sum}")
             result_dict.append(
                 {"orderNumber": i + 1, "orderType": "flipping", "matchingNumber": num, "matchingType": 'vertical',
                  "transformation": 'mirroring', "edgeSum": edge_sum})
@@ -396,8 +396,8 @@ def edge_detection(res_images, canny_images):
             diff_img = v_canny_img - v_c_img
             h, w = v_img.shape[:2]
             edge_sum = numpy.sum(diff_img[int(h / 2 - 30):int(h / 2 + 30), :])
-            print(
-                f"Order Number {i + 1}, orderType: {'flipping'}Matching Order {num}, Merge Type {'vertical'}, Transformation {'none'} , EdgeSum {edge_sum}")
+            # print(
+            #     f"Order Number {i + 1}, orderType: {'flipping'}Matching Order {num}, Merge Type {'vertical'}, Transformation {'none'} , EdgeSum {edge_sum}")
             result_dict.append(
                 {"orderNumber": i + 1, "orderType": "flipping", "matchingNumber": num, "matchingType": 'vertical',
                  "transformation": 'flipping', "edgeSum": edge_sum})
@@ -409,8 +409,8 @@ def edge_detection(res_images, canny_images):
             diff_img = v_canny_img - v_c_img
             h, w = v_img.shape[:2]
             edge_sum = numpy.sum(diff_img[int(h / 2 - 30):int(h / 2 + 30), :])
-            print(
-                f"Order Number {i + 1}, orderType: {'flipping'}Matching Order {num}, Merge Type {'vertical'}, Transformation {'none'} , EdgeSum {edge_sum}")
+            # print(
+            #     f"Order Number {i + 1}, orderType: {'flipping'}Matching Order {num}, Merge Type {'vertical'}, Transformation {'none'} , EdgeSum {edge_sum}")
             result_dict.append(
                 {"orderNumber": i + 1, "orderType": "flipping", "matchingNumber": num, "matchingType": 'vertical',
                  "transformation": 'mirroring&flipping', "edgeSum": edge_sum})
@@ -423,8 +423,8 @@ def edge_detection(res_images, canny_images):
             diff_img = v_canny_img - v_c_img
             h, w = v_img.shape[:2]
             edge_sum = numpy.sum(diff_img[int(h / 2 - 30):int(h / 2 + 30), :])
-            print(
-                f"Order Number {i + 1}, orderType: {'mirroring&flipping'}Matching Order {num}, Merge Type {'vertical'}, Transformation {'none'} , EdgeSum {edge_sum}")
+            # print(
+            #     f"Order Number {i + 1}, orderType: {'mirroring&flipping'}Matching Order {num}, Merge Type {'vertical'}, Transformation {'none'} , EdgeSum {edge_sum}")
             result_dict.append({"orderNumber": i + 1, "orderType": "mirroring&flipping", "matchingNumber": num,
                                 "matchingType": 'vertical', "transformation": 'none', "edgeSum": edge_sum})
 
@@ -435,8 +435,8 @@ def edge_detection(res_images, canny_images):
             diff_img = v_canny_img - v_c_img
             h, w = v_img.shape[:2]
             edge_sum = numpy.sum(diff_img[int(h / 2 - 30):int(h / 2 + 30), :])
-            print(
-                f"Order Number {i + 1}, orderType: {'mirroring&flipping'}Matching Order {num}, Merge Type {'vertical'}, Transformation {'none'} , EdgeSum {edge_sum}")
+            # print(
+            #     f"Order Number {i + 1}, orderType: {'mirroring&flipping'}Matching Order {num}, Merge Type {'vertical'}, Transformation {'none'} , EdgeSum {edge_sum}")
             result_dict.append({"orderNumber": i + 1, "orderType": "mirroring&flipping", "matchingNumber": num,
                                 "matchingType": 'vertical', "transformation": 'mirroring', "edgeSum": edge_sum})
 
@@ -447,8 +447,8 @@ def edge_detection(res_images, canny_images):
             diff_img = v_canny_img - v_c_img
             h, w = v_img.shape[:2]
             edge_sum = numpy.sum(diff_img[int(h / 2 - 30):int(h / 2 + 30), :])
-            print(
-                f"Order Number {i + 1}, orderType: {'mirroring&flipping'}Matching Order {num}, Merge Type {'vertical'}, Transformation {'none'} , EdgeSum {edge_sum}")
+            # print(
+            #     f"Order Number {i + 1}, orderType: {'mirroring&flipping'}Matching Order {num}, Merge Type {'vertical'}, Transformation {'none'} , EdgeSum {edge_sum}")
             result_dict.append({"orderNumber": i + 1, "orderType": "mirroring&flipping", "matchingNumber": num,
                                 "matchingType": 'vertical', "transformation": 'flipping', "edgeSum": edge_sum})
 
@@ -459,8 +459,8 @@ def edge_detection(res_images, canny_images):
             diff_img = v_canny_img - v_c_img
             h, w = v_img.shape[:2]
             edge_sum = numpy.sum(diff_img[int(h / 2 - 30):int(h / 2 + 30), :])
-            print(
-                f"Order Number {i + 1}, orderType: {'mirroring&flipping'}Matching Order {num}, Merge Type {'vertical'}, Transformation {'none'} , EdgeSum {edge_sum}")
+            # print(
+            #     f"Order Number {i + 1}, orderType: {'mirroring&flipping'}Matching Order {num}, Merge Type {'vertical'}, Transformation {'none'} , EdgeSum {edge_sum}")
             result_dict.append({"orderNumber": i + 1, "orderType": "mirroring&flipping", "matchingNumber": num,
                                 "matchingType": 'vertical', "transformation": 'mirroring&flipping',
                                 "edgeSum": edge_sum})
@@ -470,7 +470,6 @@ def edge_detection(res_images, canny_images):
 if __name__ == "__main__":
 
     cols, rows = sys.argv[1], sys.argv[2]
-    print(cols, rows)
 
     cropped_images = [cv2.imread(f) for f in glob.glob("image/crooped_images/*.jpg")]
 
@@ -488,4 +487,3 @@ if __name__ == "__main__":
 
     # 각 이미지의 변환 형태에 따른 Edge를 검출하여 경계선 부분의 edge 합을 구하는 코드
     df = edge_detection(res_images, canny_images)
-    
